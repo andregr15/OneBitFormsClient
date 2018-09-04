@@ -23,6 +23,7 @@
     "@angular/router": "^6.1.0",
     "@mdi/font": "^2.7.94",
     "@swimlane/ngx-charts": "^9.0.0",
+    "angular-token": "^6.0.2",
     "chart.js": "^2.7.2",
     "core-js": "^2.5.4",
     "jquery": "^3.3.1",
