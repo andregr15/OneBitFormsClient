@@ -16,6 +16,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { FormsModule } from './forms/forms.module';
 import { AnswersModule } from './answers/answers.module';
 
+import { RouterModule } from '@angular/router';
+import { routing } from './app.routing';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +32,9 @@ import { AnswersModule } from './answers/answers.module';
     ColorPickerModule,
     NgxChartsModule,
     FormsModule,
-    AnswersModule
+    AnswersModule,
+    RouterModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
