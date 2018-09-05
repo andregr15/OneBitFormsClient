@@ -8,9 +8,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { MaterializeModule } from 'ngx-materialize';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { RouterModule } from '@angular/router';
+
 @NgModule({
   imports: [
     CommonModule,
+    RouterModule,
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
