@@ -9,7 +9,7 @@
       <form #signInForm="ngForm" (ngSubmit)="onSubmit()">
         <div class="row">
           <div class="input-field">
-              <input type="text" class="form-control" placeholder="Email" required [(ngModel)]="_signInData.email" name="login">
+              <input type="text" class="form-control" placeholder="Email" required [(ngModel)]="_signInData.login" name="login">
               <input type="password" class="input-field" placeholder="Password" required="required" [(ngModel)]="_signInData.password" name="password">  
           </div>
         </div>
@@ -23,7 +23,7 @@
 
         <div class="row">
           <span class="pull-right">
-            <a href="#" routerLink="/asdfas">Forgot Password?</a>
+            <a href="#" routerLink="/forgot_password">Forgot Password?</a>
           </span>
         </div>
       </form>

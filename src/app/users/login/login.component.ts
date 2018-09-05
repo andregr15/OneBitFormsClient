@@ -23,21 +23,18 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     this.tokenService.signIn(this._signInData).subscribe(
-      res => {
+      success => {
         this.router.navigate(['/forms']);
       },
       error => {
         this._signInData = <SignInData>{};
         console.log(error._body);
         
-        if(error.status == 0) {
-          for(const message of JSON.parse(error._body)['errors']) {
+        if(error.status !== 0) 
+          for(const message of error.error.errors)
             this.toastService.show(message, 8000, 'red');
-          }
-        }
-        else {
+        else 
           this.toastService.show('Connection Error', 8000, 'red');
-        }
       }
     );
   }
