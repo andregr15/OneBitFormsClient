@@ -32,9 +32,9 @@ export class LoginComponent implements OnInit {
         
         if(error.status !== 0) 
           for(const message of error.error.errors)
-            this.toastService.show(message, 8000, 'red');
+            this.toastService.show(message, 8000, 'red lighten-1');
         else 
-          this.toastService.show('Connection Error', 8000, 'red');
+          this.toastService.show('Connection Error', 8000, 'red lighten-1');
       }
     );
   }
