@@ -24,6 +24,8 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     this.tokenService.signIn(this._signInData).subscribe(
       success => {
+        // added to solve the login - logout exibition problem
+        this.tokenService.validateToken();
         this.router.navigate(['/forms']);
       },
       error => {
