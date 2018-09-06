@@ -42,7 +42,8 @@ import { AngularTokenModule } from 'angular-token';
     HttpClientModule,
     AngularTokenModule.forRoot({
       apiBase: 'http://localhost:3000/api/v1',
-      signInRedirect: '/login'
+      signInRedirect: '/login',
+      signOutFailedValidate: true
     }),
     BrowserAnimationsModule
   ],

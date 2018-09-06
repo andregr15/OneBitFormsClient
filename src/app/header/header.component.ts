@@ -19,7 +19,8 @@ export class HeaderComponent implements OnInit {
 
   signOut() {
     this.tokenService.signOut().subscribe(
-      success => { },
+      success => { 
+      },
       error => {
         console.log(error);
         this.toastService.show('Error in Logout', 8000, 'red lighten-1');

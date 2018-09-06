@@ -5,7 +5,7 @@
     </a>
 
     <ul class="right">
-      <div *ngIf="tokenService.currentUserData == null">
+      <div *ngIf="!tokenService.userSignedIn()">
         <li>
           <a href="#" routerLink="/login">Login</a>
         </li>
@@ -14,7 +14,7 @@
         </li>
       </div>
 
-      <div *ngIf="tokenService.currentUserData != null">
+      <div *ngIf="tokenService.userSignedIn()">
         <li>
           <a href="#" (click)="signOut()">Logout</a>
         </li>
