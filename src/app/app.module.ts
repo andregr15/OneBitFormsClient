@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { apiUrl } from './constants';
+
 import { AppComponent } from './app.component';
 
 import { MaterializeModule } from 'ngx-materialize';
@@ -22,6 +24,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularTokenModule } from 'angular-token';
 
+import { FormService } from './shared/form.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,13 +45,13 @@ import { AngularTokenModule } from 'angular-token';
     routing,
     HttpClientModule,
     AngularTokenModule.forRoot({
-      apiBase: 'http://localhost:3000/api/v1',
+      apiBase: apiUrl(),
       signInRedirect: '/login',
       signOutFailedValidate: true
     }),
     BrowserAnimationsModule
   ],
-  providers: [AngularTokenModule],
+  providers: [AngularTokenModule, FormService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
