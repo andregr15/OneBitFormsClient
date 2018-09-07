@@ -26,6 +26,7 @@ import { AngularTokenModule } from 'angular-token';
 
 import { FormService } from './shared/form.service';
 import { QuestionService } from './shared/question.service';
+import { AnswerService } from './answers/shared/answer.service';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { QuestionService } from './shared/question.service';
   providers: [
     AngularTokenModule, 
     FormService,
-    QuestionService
+    QuestionService,
+    AnswerService
   ],
   bootstrap: [AppComponent]
 })
