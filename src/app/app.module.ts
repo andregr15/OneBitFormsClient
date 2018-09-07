@@ -25,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AngularTokenModule } from 'angular-token';
 
 import { FormService } from './shared/form.service';
+import { QuestionService } from './shared/question.service';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,11 @@ import { FormService } from './shared/form.service';
     }),
     BrowserAnimationsModule
   ],
-  providers: [AngularTokenModule, FormService],
+  providers: [
+    AngularTokenModule, 
+    FormService,
+    QuestionService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
