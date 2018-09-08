@@ -1,3 +1,6 @@
-<p>
-  active works!
-</p>
+<div class="switch">
+  <label>
+    <input type="checkbox" id="switch-id" [(ngModel)]="form.enable" (change)="toggleEnable()">
+    <span class="lever"></span>
+  </label>
+</div>
