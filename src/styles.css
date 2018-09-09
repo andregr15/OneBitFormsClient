@@ -17,3 +17,21 @@
   border-bottom: 1px solid #64b5f6 !important; 
   box-shadow: 0 1px 0 0 #64b5f6 !important; 
 }
+
+.input-field .materialize-textarea[_ngcontent-c3]:focus { 
+  border-bottom: 1px solid #64b5f6 !important; 
+  box-shadow: 0 1px 0 0 #64b5f6 !important; 
+}
+
+.input-field .color-picker[_ngcontent-c3]:focus { 
+  border-bottom: 1px solid #64b5f6 !important; 
+  box-shadow: 0 1px 0 0 #64b5f6 !important; 
+}
+
+.switch label input[type=checkbox]:checked+.lever {
+  background-color: #64b5f6 !important;
+}
+
+.switch label input[type=checkbox]:checked+.lever:after {
+  background-color: #64b5f6 !important;
+}
