@@ -21,3 +21,7 @@
 .btn {
   width: 120px;
 }
+
+.remove_icon:hover {
+  color: #ef5350 ;
+}

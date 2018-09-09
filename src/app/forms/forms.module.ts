@@ -9,6 +9,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { routing } from './../app.routing';
 import { FormsModule as CoreFormsModule } from '@angular/forms';
+import { FormFormComponent } from './form-form/form-form.component';
+import { QuestionListComponent } from './question-list/question-list.component';
+import { QuestionFormComponent } from './question-form/question-form.component';
+
+import { ColorPickerModule } from 'ngx-color-picker';
 
 @NgModule({
   imports: [
@@ -17,11 +22,12 @@ import { FormsModule as CoreFormsModule } from '@angular/forms';
     MaterializeModule.forRoot(),
     routing,
     CoreFormsModule,
-    RouterModule
+    RouterModule,
+    ColorPickerModule
   ],
   exports: [
     FormListComponent
   ],
-  declarations: [FormListComponent, FormEditComponent, ActiveComponent]
+  declarations: [FormListComponent, FormEditComponent, ActiveComponent, FormFormComponent, QuestionListComponent, QuestionFormComponent]
 })
 export class FormsModule { }
