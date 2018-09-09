@@ -13,7 +13,7 @@ export class QuestionService {
   constructor(private http: HttpClient) { }
 
   createQuestion(form_id, question_params): Observable<any> {
-    return this.http.post(apiUrl(this.resource), {form_id: form_id, question_params});
+    return this.http.post(apiUrl(this.resource), {form_id: form_id, question: question_params});
   }
 
   updateQuestion(question_id, question_params): Observable<any> {

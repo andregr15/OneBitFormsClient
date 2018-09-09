@@ -18,12 +18,12 @@
   box-shadow: 0 1px 0 0 #64b5f6 !important; 
 }
 
-.input-field .materialize-textarea[_ngcontent-c3]:focus { 
+.input-field .materialize-textarea:focus { 
   border-bottom: 1px solid #64b5f6 !important; 
   box-shadow: 0 1px 0 0 #64b5f6 !important; 
 }
 
-.input-field .color-picker[_ngcontent-c3]:focus { 
+.input-field .color-picker:focus { 
   border-bottom: 1px solid #64b5f6 !important; 
   box-shadow: 0 1px 0 0 #64b5f6 !important; 
 }
@@ -34,4 +34,12 @@
 
 .switch label input[type=checkbox]:checked+.lever:after {
   background-color: #64b5f6 !important;
+}
+
+ul.dropdown-content.select-dropdown li span {
+  color: #64b5f6; /* no need for !important :) */
+}
+
+ul.dropdown-content.select-dropdown li.disabled span {
+  color: #888; /* no need for !important :) */
 }

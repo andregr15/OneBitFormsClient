@@ -15,6 +15,8 @@ import { QuestionFormComponent } from './question-form/question-form.component';
 
 import { ColorPickerModule } from 'ngx-color-picker';
 
+import { MzSelectModule } from 'ngx-materialize';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -23,7 +25,8 @@ import { ColorPickerModule } from 'ngx-color-picker';
     routing,
     CoreFormsModule,
     RouterModule,
-    ColorPickerModule
+    ColorPickerModule,
+    MzSelectModule
   ],
   exports: [
     FormListComponent

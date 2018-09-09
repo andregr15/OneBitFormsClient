@@ -1,3 +1,44 @@
-<p>
-  question-form works!
-</p>
+<div class="card">
+  <div class="card-content">
+    
+    <form #q="ngForm" (ngSubmit)="onSubmit(q)">
+
+      <div class="question">
+        <div class="row valign-wrapper">
+          
+          <div class="col m9 input-field">
+            <textarea name="title" class="materialize-textarea" placeholder="Your Question" [(ngModel)]="question.title" #title="ngModel" required></textarea>
+            <label for="title" [hidden]="title.valid || title.pristine" class="red-text text-lighten-2">Required</label>
+          </div>
+
+          <div class="col m3 input-field">
+            <mz-select-container [inline]="true" >
+              <select mz-select name="kind" class="kind_select" [(ngModel)]="question.kind" #kind="ngModel" [placeholder]="'Kind'" required>
+                <option value="short_text">Short Text</option>
+                <option value="long_text">Long Text</option>
+                <option value="integer">Integer</option>
+                <option value="boolean">Boolean</option>
+              </select>
+            </mz-select-container>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col m3" *ngIf="question.id !== undefined">
+            <a href="#" class="grey-text" (click)="deleteQuestion()">
+              <i class="mdi mdi-delete small remove_icon"></i>
+            </a>
+          </div>
+
+          <div class="col m3 right">
+            <button [disabled]="!q.valid" class="btn blue lighten-2" *ngIf="question.id == undefined">Create</button>
+            <button [disabled]="!q.valid" class="btn blue lighten-2" *ngIf="question.id !== undefined">Update</button>
+          </div>
+        </div>
+      </div>
+
+    </form>
+
+  </div>
+</div>

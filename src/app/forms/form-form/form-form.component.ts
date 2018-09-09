@@ -25,7 +25,7 @@ export class FormFormComponent implements OnInit {
 
   onSubmit(f) {
     if(this.form.id) {
-      this.service.updateForm(this.form.id, f).subscribe(
+      this.service.updateForm(this.form.id, this.form).subscribe(
         res => {
           this.toastService.show('Form updated', 8000, 'green');
         }, error => {
@@ -33,7 +33,7 @@ export class FormFormComponent implements OnInit {
         }
       );
     } else {
-      this.service.createForm(f).subscribe(
+      this.service.createForm(this.form).subscribe(
         res => {
           this.router.navigate([`/forms/${res.slug}`]);
         }, error => {

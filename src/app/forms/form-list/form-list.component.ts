@@ -18,8 +18,9 @@ export class FormListComponent implements OnInit {
   ngOnInit() {
     this.service.getForms().subscribe(
       res => {
-          for(const form of res)
-          this.forms.push(new Form(form));
+          for(const form of res) {
+            this.forms.push(new Form(form));
+          }
         }
       );
   }

@@ -12,9 +12,9 @@ export class Form {
 
     constructor(formInfo: any){
         this.id = formInfo.id;
-        this.title = formInfo.id;
+        this.title = formInfo.title;
         this.description = formInfo.description;
-        this.user_id = formInfo.id;
+        this.user_id = formInfo.user_id;
         this.enable = formInfo.enable;
         this.primary_color = formInfo.primary_color;
         this.slug = formInfo.slug;
@@ -23,7 +23,8 @@ export class Form {
     }
 
     private includeQuestions(questions: any){
-        for(const question in questions) 
-            this.questions.push(new Question(question));        
+        for(const question in questions) {
+            this.questions.push(new Question(questions[question]));        
+        }
     }
 }

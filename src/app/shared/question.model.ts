@@ -18,7 +18,7 @@ export class Question {
 
     private includeQuestionsAnswers(questions_answers: any){
         for(const question_answer in questions_answers)
-            this.questions_answers.push(new QuestionAnswer(question_answer));
+            this.questions_answers.push(new QuestionAnswer(questions_answers[question_answer]));
     }
 }
 
