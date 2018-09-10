@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 
 import { MaterializeModule } from 'ngx-materialize';
 import { ColorPickerModule } from 'ngx-color-picker';
-import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
@@ -39,7 +38,6 @@ import { AnswerService } from './answers/shared/answer.service';
     BrowserModule,
     MaterializeModule.forRoot(),
     ColorPickerModule,
-    NgxChartsModule,
     FormsModule,
     AnswersModule,
     UsersModule,

@@ -12,7 +12,7 @@ import { AllComponent } from './answer-list/all/all.component';
 import { IndividualComponent } from './answer-list/individual/individual.component';
 
 import { MaterializeModule } from 'ngx-materialize';
-import { ChartCommonModule } from '@swimlane/ngx-charts';
+import { ChartsModule } from 'ng2-charts';
 
 
 @NgModule({
@@ -20,7 +20,7 @@ import { ChartCommonModule } from '@swimlane/ngx-charts';
     CommonModule,
     FormsModule,
     MaterializeModule.forRoot(),
-    ChartCommonModule
+    ChartsModule
   ],
   declarations: [AnswerListComponent, AnswerNewComponent, GraphNumberComponent, GraphTextComponent, GraphBooleanComponent, IndividualDetailsComponent, AllComponent, IndividualComponent]
 })

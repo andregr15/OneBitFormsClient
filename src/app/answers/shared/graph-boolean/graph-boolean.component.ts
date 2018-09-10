@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { QuestionAnswer } from '../../shared/questions_answer.model';
 
 @Component({
   selector: 'app-graph-boolean',
@@ -7,9 +8,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GraphBooleanComponent implements OnInit {
 
+  @Input() questions_answers: QuestionAnswer[];
+  public chartLabels: string[];
+  public chartData: number[];
+  public chartType = 'doughnut';
+
   constructor() { }
 
   ngOnInit() {
+    let yes = 0;
+    let no = 0;
+
+    for(const qa of this.questions_answers){
+      if(qa.value != null) {
+        if(qa.value === '0'){
+          no += 1;
+        } else {
+          yes += 1;
+        }
+      }
+    }
+
+    if(yes > 0 || no > 0){
+      this.chartLabels = ['Yes', 'No'];
+      this.chartData = [yes, no];
+    }
   }
 
 }
