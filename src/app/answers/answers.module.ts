@@ -6,10 +6,12 @@ import { GraphNumberComponent } from './shared/graph-number/graph-number.compone
 import { GraphTextComponent } from './shared/graph-text/graph-text.component';
 import { GraphBooleanComponent } from './shared/graph-boolean/graph-boolean.component';
 import { IndividualDetailsComponent } from './shared/individual-details/individual-details.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   declarations: [AnswerListComponent, AnswerNewComponent, GraphNumberComponent, GraphTextComponent, GraphBooleanComponent, IndividualDetailsComponent]
 })

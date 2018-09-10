@@ -26,7 +26,7 @@ const appRoutes: Routes = [
     { path: 'forms', component: FormListComponent, canActivate: [AngularTokenService] },
     { path: 'forms/new', component: FormEditComponent, canActivate: [AngularTokenService] },
     { path: 'forms/:id', component: FormEditComponent, canActivate: [AngularTokenService] },
-    { path: 'answers/:id/new', component: AnswerNewComponent, canActivate: [AngularTokenService] },
+    { path: 'answers/:id/new', component: AnswerNewComponent },
     { path: 'answers/:id', component: AnswerListComponent, canActivate: [AngularTokenService] },
     { path: '**', component: NotFoundComponent }
 ];

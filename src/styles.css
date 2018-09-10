@@ -8,6 +8,11 @@
   box-shadow: 0 1px 0 0 #64b5f6 !important; 
 }
 
+.input-field input[type=number]:focus { 
+  border-bottom: 1px solid #64b5f6 !important; 
+  box-shadow: 0 1px 0 0 #64b5f6 !important; 
+}
+
 .input-field input[type=password]:focus + label 
 { 
   color: #64b5f6; 
@@ -42,4 +47,11 @@ ul.dropdown-content.select-dropdown li span {
 
 ul.dropdown-content.select-dropdown li.disabled span {
   color: #888; /* no need for !important :) */
+}
+
+[type="radio"]:checked + label::after, [type="radio"].with-gap:checked + label::after {
+  background-color: #64b5f6 !important;
+}
+[type="radio"]:checked + label::after, [type="radio"].with-gap:checked + label::before, [type="radio"].with-gap:checked + label::after {
+  border: 2px solid #64b5f6 !important;
 }
