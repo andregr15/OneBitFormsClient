@@ -8,11 +8,20 @@ import { GraphBooleanComponent } from './shared/graph-boolean/graph-boolean.comp
 import { IndividualDetailsComponent } from './shared/individual-details/individual-details.component';
 import { FormsModule } from '@angular/forms';
 
+import { AllComponent } from './answer-list/all/all.component';
+import { IndividualComponent } from './answer-list/individual/individual.component';
+
+import { MaterializeModule } from 'ngx-materialize';
+import { ChartCommonModule } from '@swimlane/ngx-charts';
+
+
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    MaterializeModule.forRoot(),
+    ChartCommonModule
   ],
-  declarations: [AnswerListComponent, AnswerNewComponent, GraphNumberComponent, GraphTextComponent, GraphBooleanComponent, IndividualDetailsComponent]
+  declarations: [AnswerListComponent, AnswerNewComponent, GraphNumberComponent, GraphTextComponent, GraphBooleanComponent, IndividualDetailsComponent, AllComponent, IndividualComponent]
 })
 export class AnswersModule { }
