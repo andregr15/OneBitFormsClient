@@ -32,8 +32,6 @@ export class QuestionFormComponent implements OnInit {
         }
       );
     } else {
-      // this.question.order = Question.getMaxOrder(this.questions);
-      // console.log(this.question.order);
       this.service.createQuestion(this.form_id, this.question).subscribe(
         res => {
           this.questions.push(new Question(res));

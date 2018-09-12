@@ -8,7 +8,7 @@ import { Form } from '../../shared/form.model';
 import { Answer } from '../shared/answer.model';
 import { QuestionAnswer } from '../shared/questions_answer.model';
 
-import { ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-answer-new',
@@ -25,7 +25,8 @@ export class AnswerNewComponent implements OnInit {
     private formService: FormService,
     private answerService: AnswerService,
     private toastService: MzToastService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -54,11 +55,12 @@ export class AnswerNewComponent implements OnInit {
 
     this.answerService.createAnswer(this.answer).subscribe(
       res => {
-        this.toastService.show('Answer send with sucess', 10000, 'green');
-        this.answer = new Answer({form_id: this.form.id});
-        for(const question of this.form.questions) {
-          this.answer.questions_answers.push(new QuestionAnswer({question: question}));
-        }
+        // this.toastService.show('Answer send with sucess', 10000, 'green');
+        // this.answer = new Answer({form_id: this.form.id});
+        // for(const question of this.form.questions) {
+        //   this.answer.questions_answers.push(new QuestionAnswer({question: question}));
+        // }
+        this.router.navigate([`/answers/submited/${this.form.slug}`]);
       }, error => {
         this.toastService.show('Problem in send answer', 8000, 'red lighten-1');
       }

@@ -16,6 +16,7 @@ import { AnswerListComponent } from './answers/answer-list/answer-list.component
 import { AnswerNewComponent } from './answers/answer-new/answer-new.component';
 import { LoginComponent } from './users/login/login.component';
 import { RegisterComponent } from './users/register/register.component';
+import { AnswerSubmitedComponent } from './answers/answer-submited/answer-submited.component';
 
 
 const appRoutes: Routes = [
@@ -26,6 +27,7 @@ const appRoutes: Routes = [
     { path: 'forms', component: FormListComponent, canActivate: [AngularTokenService] },
     { path: 'forms/new', component: FormEditComponent, canActivate: [AngularTokenService] },
     { path: 'forms/:id', component: FormEditComponent, canActivate: [AngularTokenService] },
+    { path: 'answers/submited/:id', component: AnswerSubmitedComponent },
     { path: 'answers/:id/new', component: AnswerNewComponent },
     { path: 'answers/:id', component: AnswerListComponent, canActivate: [AngularTokenService] },
     { path: '**', component: NotFoundComponent }

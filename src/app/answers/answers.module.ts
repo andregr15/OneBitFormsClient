@@ -13,6 +13,7 @@ import { IndividualComponent } from './answer-list/individual/individual.compone
 
 import { MaterializeModule } from 'ngx-materialize';
 import { ChartsModule } from 'ng2-charts';
+import { AnswerSubmitedComponent } from './answer-submited/answer-submited.component';
 
 
 @NgModule({
@@ -22,6 +23,6 @@ import { ChartsModule } from 'ng2-charts';
     MaterializeModule.forRoot(),
     ChartsModule
   ],
-  declarations: [AnswerListComponent, AnswerNewComponent, GraphNumberComponent, GraphTextComponent, GraphBooleanComponent, IndividualDetailsComponent, AllComponent, IndividualComponent]
+  declarations: [AnswerListComponent, AnswerNewComponent, GraphNumberComponent, GraphTextComponent, GraphBooleanComponent, IndividualDetailsComponent, AllComponent, IndividualComponent, AnswerSubmitedComponent]
 })
 export class AnswersModule { }
