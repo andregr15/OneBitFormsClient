@@ -32,12 +32,12 @@ export class QuestionFormComponent implements OnInit {
         }
       );
     } else {
-      this.question.order = this.questions[this.questions.length-1].order + 1;
-      console.log(this.question.order);
+      // this.question.order = Question.getMaxOrder(this.questions);
+      // console.log(this.question.order);
       this.service.createQuestion(this.form_id, this.question).subscribe(
         res => {
           this.questions.push(new Question(res));
-          this.question = new Question({});
+          this.question = new Question({order: Question.getMaxOrder(this.questions)});
         }, error => {
           this.toastService.show('Problem in Question creation', 8000, 'red lighten-1');
         }

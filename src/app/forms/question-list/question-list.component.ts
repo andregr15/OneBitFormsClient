@@ -12,11 +12,11 @@ export class QuestionListComponent implements OnInit {
   @Input() questions: Question[];
   @Input() form_id: number;
   
-  public question_new: Question = new Question({order: 0});
+  public question_new: Question;
 
   constructor() { }
 
   ngOnInit() {
+    this.question_new = new Question({order: Question.getMaxOrder(this.questions)});
   }
-
 }

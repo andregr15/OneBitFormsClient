@@ -5,3 +5,9 @@
 .remove_icon:hover {
   color: #ef5350;
 }
+
+.required_label {
+  color: #888;
+  font-size: 12px;
+  display: block;
+}

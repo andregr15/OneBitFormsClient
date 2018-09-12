@@ -45,6 +45,13 @@ export class AnswerNewComponent implements OnInit {
   }
 
   onSubmit(f) {
+    for(const q of this.answer.questions_answers){
+      if(q.question.required && (q.value == null || q.value == undefined)){
+        alert(`The question ${q.question.title} is required!`)
+        return;
+      }
+    }
+
     this.answerService.createAnswer(this.answer).subscribe(
       res => {
         this.toastService.show('Answer send with sucess', 10000, 'green');

@@ -15,7 +15,7 @@
 
         <div class="row valign-wrapper">
 
-        <mz-select-container class="col m4">
+          <mz-select-container class="col m4">
             <select mz-select name="kind" class="kind_select" [(ngModel)]="question.kind" #kind="ngModel" [placeholder]="'Kind'" required>
               <option value="short_text">Short Text</option>
               <option value="long_text">Long Text</option>
@@ -24,14 +24,15 @@
             </select>
           </mz-select-container>
 
-          <mz-checkbox-container class="col m3 offset-m1">
-              <input mz-checkbox class="red"
-                [(ngModel)]="question.required"
-                [label]="'Required'"
-                type="checkbox"
-                #required="ngModel"
-                id="required_{{question.order}}">
-            </mz-checkbox-container>
+          <div class="col m3 offset-m1 center-align">
+            <div class="switch">
+              <span class="required_label">Required</span>
+              <label>
+                <input type="checkbox" id="switch-id" [(ngModel)]="question.required" name="required">
+                <span class="lever"></span>
+              </label>
+            </div>
+          </div>
 
           <div class="col m1" *ngIf="question.id !== undefined">
             <a href="#" class="grey-text" (click)="deleteQuestion()">
@@ -45,7 +46,6 @@
             <button [disabled]="!q.valid" class="btn blue lighten-2" *ngIf="question.id !== undefined">Update</button>
           </div>
         </div>
-
 
       </div>
 

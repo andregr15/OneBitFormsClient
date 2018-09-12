@@ -24,5 +24,15 @@ export class Question {
         for(const question_answer in questions_answers)
             this.questions_answers.push(new QuestionAnswer(questions_answers[question_answer]));
     }
+
+    static getMaxOrder(questions: Question[]): number {
+        let maxOrder: number = 0;
+        for(const q of questions) {
+            if(q.order > maxOrder){
+                maxOrder = q.order;
+            }
+        }
+        return maxOrder + 1;
+    }
 }
 
