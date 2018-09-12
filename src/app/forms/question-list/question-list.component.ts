@@ -12,7 +12,7 @@ export class QuestionListComponent implements OnInit {
   @Input() questions: Question[];
   @Input() form_id: number;
   
-  public question_new: Question = new Question({});
+  public question_new: Question = new Question({order: 0});
 
   constructor() { }
 
