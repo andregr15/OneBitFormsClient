@@ -15,11 +15,13 @@ export class HeaderComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    //this.tokenService.validateToken().subscribe();
   }
 
   signOut() {
     this.tokenService.signOut().subscribe(
       success => { 
+        console.log(success);
       },
       error => {
         console.log(error);
