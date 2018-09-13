@@ -13,7 +13,8 @@ export class Answer {
     }
 
     private includeQuestionsAnswers(questions_answers: any){
-        for(const question_answer in questions_answers)
+        for(const question_answer of questions_answers) {
             this.questions_answers.push(new QuestionAnswer(question_answer));
+        }
     }
 }

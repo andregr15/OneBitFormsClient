@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
+import { AnswerService } from '../../shared/answer.service';
+import { Answer } from '../../shared/answer.model';
 
 @Component({
   selector: 'app-individual',
@@ -7,9 +11,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndividualComponent implements OnInit {
 
-  constructor() { }
+  public answers: Answer[] = [];
+  public p: number = 1;
+
+  constructor(
+    private route: ActivatedRoute,
+    private service: AnswerService
+  ) { }
 
   ngOnInit() {
+    this.route.params.subscribe(
+      params => {
+        this.service.getAnswers(params['id']).subscribe(
+          res => {
+            for(const answer of res) {
+              if(answer.questions_answers.length > 0)
+                this.answers.push(new Answer(answer));
+            }
+          }
+        );
+      }
+    )
   }
 
 }

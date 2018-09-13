@@ -1,5 +1,5 @@
 <div *ngFor="let question of questions; let idx = index">
-  <h5>{{ idx + 1 }} - {{ question.title }}</h5>
+  <h5 class="blue-text">{{ idx + 1 }} - {{ question.title }}</h5>
 
   <div *ngIf="question.kind == 'integer'">
     <app-graph-number [questions_answers]="question.questions_answers"></app-graph-number>

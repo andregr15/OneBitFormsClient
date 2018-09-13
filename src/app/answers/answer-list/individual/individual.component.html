@@ -1,3 +1,20 @@
-<p>
-  individual works!
-</p>
+<div>
+  <ul>
+    <li *ngFor="let item of this.answers | paginate: { itemsPerPage: 1, currentPage: p}">
+      <div class="card">
+        <div class="card-content">
+          <div class="row" *ngFor="let i of item.questions_answers; let idx = index">
+            <div class="col s12">
+              <h5 class="blue-text">{{ idx + 1 }} - {{ i.question.title }}</h5>
+              <p class="question_answer">{{ i.question.kind == 'boolean' ? i.value == 0 ? 'No' : 'Yes' : i.value === undefined || i.value === null ? '-' : i.value }}</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  
+</div>

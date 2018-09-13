@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Question } from '../../../shared/question.model';
-import { AnswerService } from '../../shared/answer.service';
+import { QuestionService } from '../../../shared/question.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -13,14 +13,14 @@ export class AllComponent implements OnInit {
   public questions: Question[] = [];
 
   constructor(
-    private service: AnswerService,
+    private service: QuestionService,
     private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
     this.route.params.subscribe(
       params => {
-        this.service.getAnswers(params['id']).subscribe(
+        this.service.getQuestions(params['id']).subscribe(
           res => {
             for(const question of res){
               this.questions.push(new Question(question));

@@ -1,0 +1,9 @@
+.question_answer {
+  margin-left: 5px;
+  border-left: solid 5px #ddd;
+  border-top: solid 1px #ddd;
+  border-bottom: solid 1px #ddd;
+  border-right: solid 1px #ddd;
+  padding-left: 5px;
+  font-size: 16px;
+}

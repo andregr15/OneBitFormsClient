@@ -12,6 +12,10 @@ export class QuestionService {
 
   constructor(private http: HttpClient) { }
 
+  getQuestions(form_id): Observable<any> {
+    return this.http.get(apiUrl(this.resource), {params: {form_id: form_id}});
+  }
+
   createQuestion(form_id, question_params): Observable<any> {
     return this.http.post(apiUrl(this.resource), {form_id: form_id, question: question_params});
   }

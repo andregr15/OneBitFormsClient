@@ -15,13 +15,16 @@ import { MaterializeModule } from 'ngx-materialize';
 import { ChartsModule } from 'ng2-charts';
 import { AnswerSubmitedComponent } from './answer-submited/answer-submited.component';
 
+import { NgxPaginationModule } from 'ngx-pagination';
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     MaterializeModule.forRoot(),
-    ChartsModule
+    ChartsModule,
+    NgxPaginationModule
   ],
   declarations: [AnswerListComponent, AnswerNewComponent, GraphNumberComponent, GraphTextComponent, GraphBooleanComponent, IndividualDetailsComponent, AllComponent, IndividualComponent, AnswerSubmitedComponent]
 })
