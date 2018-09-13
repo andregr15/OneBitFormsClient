@@ -16,7 +16,7 @@
         <div class="row valign-wrapper">
 
           <mz-select-container class="col m4">
-            <select mz-select name="kind" class="kind_select" [(ngModel)]="question.kind" #kind="ngModel" [placeholder]="'Kind'" required>
+            <select mz-select name="kind" [(ngModel)]="question.kind" #kind="ngModel" [placeholder]="'Kind'" required>
               <option value="short_text">Short Text</option>
               <option value="long_text">Long Text</option>
               <option value="integer">Integer</option>

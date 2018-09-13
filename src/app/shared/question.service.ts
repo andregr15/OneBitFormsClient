@@ -23,4 +23,8 @@ export class QuestionService {
   destroyQuestion(question_id): Observable<any> {
     return this.http.delete(apiUrl(this.resource, question_id));
   }
+
+  reorderQeustions(form_id, questions_order): Observable<any> {
+    return this.http.patch(apiUrl(this.resource), {form_id: form_id, questions_order: questions_order});
+  }
 }

@@ -17,6 +17,8 @@ import { ColorPickerModule } from 'ngx-color-picker';
 
 import { MzSelectModule } from 'ngx-materialize';
 
+import { DragulaModule } from 'ng2-dragula';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -26,7 +28,8 @@ import { MzSelectModule } from 'ngx-materialize';
     CoreFormsModule,
     RouterModule,
     ColorPickerModule,
-    MzSelectModule
+    MzSelectModule,
+    DragulaModule.forRoot()
   ],
   exports: [
     FormListComponent
