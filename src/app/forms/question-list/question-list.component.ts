@@ -53,7 +53,7 @@ export class QuestionListComponent implements OnInit, OnDestroy {
   }
 
   updateQuetionsOrder(): void {
-    this.service.reorderQeustions(this.form_id, this.questions_order).subscribe(
+    this.service.reorderQuestions(this.form_id, this.questions_order).subscribe(
       res => {
         //console.log(res);
       }, error => {
