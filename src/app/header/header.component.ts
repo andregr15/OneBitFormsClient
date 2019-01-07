@@ -18,6 +18,10 @@ export class HeaderComponent implements OnInit {
     //this.tokenService.validateToken().subscribe();
   }
 
+  logged() {
+    return this.tokenService.userSignedIn() && this.tokenService.currentUserData != null;
+  }
+
   signOut() {
     this.tokenService.signOut().subscribe(
       success => { 
