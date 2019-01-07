@@ -9,7 +9,9 @@ export class Answer {
         this.id = answerInfo.id;
         this.form_id = answerInfo.form_id;
 
-        this.includeQuestionsAnswers(answerInfo.questions_answers);
+        if(answerInfo.questions_answers != null) {
+            this.includeQuestionsAnswers(answerInfo.questions_answers);
+        }
     }
 
     private includeQuestionsAnswers(questions_answers: any){
