@@ -16,7 +16,7 @@
 
       <div *ngIf="tokenService.userSignedIn()">
         <li>
-          <a href="#" (click)="signOut()">Logout</a>
+          <a href="#" (click)="signOut()" routerLink="">Logout</a>
         </li>
       </div>
     </ul>

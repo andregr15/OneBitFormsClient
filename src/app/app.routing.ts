@@ -4,10 +4,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
-import { FormsModule } from './forms/forms.module';
-import { AnswersModule } from './answers/answers.module';
-import { UsersModule } from './users/users.module';
-
 import { AngularTokenService } from 'angular-token';
 
 import { FormListComponent } from './forms/form-list/form-list.component';
@@ -16,12 +12,16 @@ import { AnswerListComponent } from './answers/answer-list/answer-list.component
 import { AnswerNewComponent } from './answers/answer-new/answer-new.component';
 import { LoginComponent } from './users/login/login.component';
 import { RegisterComponent } from './users/register/register.component';
+import { ForgotPasswordComponent } from './users/forgot-password/forgot-password.component';
 import { AnswerSubmitedComponent } from './answers/answer-submited/answer-submited.component';
+import { NewPasswordComponent } from './users/new-password/new-password.component';
 
 
 const appRoutes: Routes = [
     { path: '', pathMatch: 'full', component: HomeComponent },
     { path: 'not-found', component: NotFoundComponent },
+    { path: 'forgot_password', component: ForgotPasswordComponent },
+    { path: 'new_password', component: NewPasswordComponent },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
     { path: 'forms', component: FormListComponent, canActivate: [AngularTokenService] },

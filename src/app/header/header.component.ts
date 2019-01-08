@@ -30,4 +30,9 @@ export class HeaderComponent implements OnInit {
     )
   }
 
+  userLogedIn(): boolean {
+    console.log(this.tokenService.userSignedIn() && this.tokenService.currentUserData != null)
+    return this.tokenService.userSignedIn() && this.tokenService.currentUserData != null;
+  }
+
 }

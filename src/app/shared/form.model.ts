@@ -19,7 +19,8 @@ export class Form {
         this.primary_color = formInfo.primary_color;
         this.slug = formInfo.slug;
         
-        this.includeQuestions(formInfo.questions);
+        if(formInfo.questions != undefined)
+            this.includeQuestions(formInfo.questions);
     }
 
     private includeQuestions(questions: any){

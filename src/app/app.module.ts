@@ -47,7 +47,8 @@ import { AnswerService } from './answers/shared/answer.service';
     AngularTokenModule.forRoot({
       apiBase: apiUrl(),
       signInRedirect: '/login',
-      signOutFailedValidate: true
+      signOutFailedValidate: true,
+      resetPasswordCallback: 'http://localhost:4200/new_password'
     }),
     BrowserAnimationsModule
   ],
