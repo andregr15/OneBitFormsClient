@@ -12,17 +12,17 @@ import { AnswerListComponent } from './answers/answer-list/answer-list.component
 import { AnswerNewComponent } from './answers/answer-new/answer-new.component';
 import { LoginComponent } from './users/login/login.component';
 import { RegisterComponent } from './users/register/register.component';
-import { ForgotPasswordComponent } from './users/forgot-password/forgot-password.component';
 import { AnswerSubmitedComponent } from './answers/answer-submited/answer-submited.component';
-import { NewPasswordComponent } from './users/new-password/new-password.component';
+import { ForgotPasswordComponent } from './users/forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './users/reset-password/reset-password.component';
 
 
 const appRoutes: Routes = [
     { path: '', pathMatch: 'full', component: HomeComponent },
     { path: 'not-found', component: NotFoundComponent },
     { path: 'forgot_password', component: ForgotPasswordComponent },
-    { path: 'new_password', component: NewPasswordComponent },
     { path: 'login', component: LoginComponent },
+    { path: 'reset_password', component: ResetPasswordComponent },
     { path: 'register', component: RegisterComponent },
     { path: 'forms', component: FormListComponent, canActivate: [AngularTokenService] },
     { path: 'forms/new', component: FormEditComponent, canActivate: [AngularTokenService] },

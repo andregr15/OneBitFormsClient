@@ -25,7 +25,8 @@ export class IndividualComponent implements OnInit {
         this.service.getAnswers(params['id']).subscribe(
           res => {
             for(const answer of res) {
-              if(answer.questions_answers.length > 0)
+              if(answer.questions_answers != null && 
+                  answer.questions_answers.length > 0)
                 this.answers.push(new Answer(answer));
             }
           }

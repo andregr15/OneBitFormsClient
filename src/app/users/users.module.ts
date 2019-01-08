@@ -10,7 +10,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { RouterModule } from '@angular/router';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-import { NewPasswordComponent } from './new-password/new-password.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
+
 
 @NgModule({
   imports: [
@@ -21,7 +22,7 @@ import { NewPasswordComponent } from './new-password/new-password.component';
     BrowserAnimationsModule,
     MaterializeModule.forRoot()
   ],
-  declarations: [LoginComponent, RegisterComponent, ForgotPasswordComponent, NewPasswordComponent],
+  declarations: [LoginComponent, RegisterComponent, ForgotPasswordComponent, ResetPasswordComponent],
   exports: [LoginComponent, RegisterComponent]
 })
 export class UsersModule { }

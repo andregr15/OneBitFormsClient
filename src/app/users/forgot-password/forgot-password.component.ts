@@ -10,29 +10,27 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ForgotPasswordComponent implements OnInit {
 
-  public login: string;
-
-  private token: string;
+  private _login: string = '';
 
   constructor(
     private tokenService: AngularTokenService,
-    private toastService: MzToastService,
-    private route: ActivatedRoute
-  ) { }
+    private toastService: MzToastService
+    ) { }
+
 
   ngOnInit() {
   }
 
   onSubmit() {
-    this.tokenService.resetPassword({
-      login: this.login
-    }).subscribe(
-      res => {
-        this.toastService.show(res.message, 8000, 'green')
-        console.log(this.tokenService);
+    this.tokenService.resetPassword({login: this._login}).subscribe(
+      success => {
+        this.toastService.show(success.message, 8000, 'green lighten-1');
       },
-      error => this.toastService.show(error.message, 8000, 'red lighten-1')
-    );
+      error =>  {
+        console.log(error);
+        this.toastService.show(error.message, 8000, 'red lighten-1');
+      }
+    )
   }
 
 }

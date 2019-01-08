@@ -8,9 +8,10 @@ export class Answer {
     constructor(answerInfo: any){
         this.id = answerInfo.id;
         this.form_id = answerInfo.form_id;
-        
-        if(answerInfo.questions_answer != undefined)
+
+        if(answerInfo.questions_answers != null) {
             this.includeQuestionsAnswers(answerInfo.questions_answers);
+        }
     }
 
     private includeQuestionsAnswers(questions_answers: any){
