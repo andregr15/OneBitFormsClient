@@ -2,9 +2,7 @@
 
 Google Forms clone build in Angular + Rails
 
-Angular API Client for OneBitForms (Api for Google Forms Clone)
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
+Angular Client for OneBitForms (Api for Google Forms Clone)
 
 ## Getting Started
 
@@ -68,16 +66,15 @@ Open your browser and access localhost:4200 to see the home page
 
 ## Built With
 
-* [Ruby on Rails](https://rubyonrails.org/) - The web framework used
-* [Devise Token Auth](https://github.com/lynndylanhurley/devise_token_auth) - Authentication Token
-* [Rack Cors](https://github.com/cyu/rack-cors) - Cross-Origin Resource Sharing (CORS) for Rack compatible web applications.
-* [Rack Attack](https://github.com/mperham/sidekiq) - Rack middleware for blocking & throttling abusive requests
-* [Friendly Id](https://github.com/moove-it/sidekiq-scheduler) - "Swiss Army bulldozer" of slugging and permalink plugins for Active Record
-* [OmniAuth](https://github.com/omniauth/omniauth) - Standardizes multi-provider authentication for web applications
-* [PostgreSQL](https://www.postgresql.org/) - SGDB
-* [Rspec Rails](https://github.com/rspec/rspec-rails) - RSpec testing framework to Ruby on Rails as a drop-in alternative to its default testing framework, Minitest.
-* [Factory Bot Rails](https://github.com/thoughtbot/factory_bot_rails) - Fixtures replacement with a straightforward definition syntax
-* [FFaker](https://github.com/ffaker/ffaker) - Easily generate fake data 
+* [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5 - The web framework used
+* [Angular Token](https://github.com/neroniaky/angular-token) - Token based authentication service for Angular with interceptor and multi-user support
+* [ChartJS](https://github.com/chartjs/Chart.js) - Simple HTML5 Charts using the <canvas> tag
+* [jQuery](https://github.com/jquery/jquery) - jQuery JavaScript Library
+* [ng2-dragula](https://github.com/valor-software/ng2-dragula) - Simple drag and drop with dragula
+* [ngx-materialize](https://github.com/sherweb/ngx-materialize) - Angular wrap around Materialize library
+* [ngx-color-picker](https://github.com/zefoy/ngx-color-picker) - Color picker widget for the Angular (version 2 and newer)
+* [ngx-pagination](https://github.com/michaelbromley/ngx-pagination) - Pagination for Angular
+* [rxjs](https://github.com/ReactiveX/rxjs) - A reactive programming library for JavaScript
 
 ## Authors
 
