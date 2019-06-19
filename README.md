@@ -1,27 +1,88 @@
 # OneBitFormsClient
 
+Google Forms clone build in Angular + Rails
+
+Angular API Client for OneBitForms (Api for Google Forms Clone)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
 
-## Development server
+## Getting Started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-## Code scaffolding
+### With Docker
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#### Prerequisites
 
-## Build
+You must have docker and docker-compose installed
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```
+For more information, please see https://docs.docker.com/install/ 
+```
 
-## Running unit tests
+#### Installing
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Access the project folder in your terminal enter the following
 
-## Running end-to-end tests
+```
+$ docker-compose build
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```
+$ docker-compose run --rm app npm install
+```
 
-## Further help
+After that for test the installation enter the following to up the server
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```
+$ docker-compose up
+```
+
+Open your browser and access localhost:4200 to see the home page
+
+
+### Without Docker
+
+#### Prerequisites
+
+You must have node and npm installed
+
+```
+For more information, please see https://nodejs.org/en/download/package-manager/
+```
+
+#### Installing
+
+Access the project folder in your terminal enter the following
+
+```
+$ npm install
+```
+
+```
+$ npm start
+```
+
+Open your browser and access localhost:4200 to see the home page
+
+
+## Built With
+
+* [Ruby on Rails](https://rubyonrails.org/) - The web framework used
+* [Devise Token Auth](https://github.com/lynndylanhurley/devise_token_auth) - Authentication Token
+* [Rack Cors](https://github.com/cyu/rack-cors) - Cross-Origin Resource Sharing (CORS) for Rack compatible web applications.
+* [Rack Attack](https://github.com/mperham/sidekiq) - Rack middleware for blocking & throttling abusive requests
+* [Friendly Id](https://github.com/moove-it/sidekiq-scheduler) - "Swiss Army bulldozer" of slugging and permalink plugins for Active Record
+* [OmniAuth](https://github.com/omniauth/omniauth) - Standardizes multi-provider authentication for web applications
+* [PostgreSQL](https://www.postgresql.org/) - SGDB
+* [Rspec Rails](https://github.com/rspec/rspec-rails) - RSpec testing framework to Ruby on Rails as a drop-in alternative to its default testing framework, Minitest.
+* [Factory Bot Rails](https://github.com/thoughtbot/factory_bot_rails) - Fixtures replacement with a straightforward definition syntax
+* [FFaker](https://github.com/ffaker/ffaker) - Easily generate fake data 
+
+## Authors
+
+* **André Gonçalves Rodrigues** - [andregr15](https://github.com/andregr15)
+
+## License
+
+This project is licensed under the MIT License
