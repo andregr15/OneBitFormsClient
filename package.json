@@ -25,7 +25,7 @@
     "angular-token": "^6.0.4",
     "chart.js": "^2.7.3",
     "core-js": "^2.6.1",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "ng2-charts": "^1.6.0",
     "ng2-dragula": "^2.1.1",
     "ngx-color-picker": "^6.8.0",
