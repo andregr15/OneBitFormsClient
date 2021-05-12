@@ -23,7 +23,7 @@
     "@angular/router": "^6.1.10",
     "@mdi/font": "^2.8.94",
     "angular-token": "^6.0.4",
-    "chart.js": "^2.7.3",
+    "chart.js": "^2.9.4",
     "core-js": "^2.6.1",
     "jquery": "^3.3.1",
     "ng2-charts": "^1.6.0",
